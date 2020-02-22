@@ -1,0 +1,15 @@
+.search {
+    display: flex;
+    position: relative;
+    .input{
+        padding-right: 40px;
+    }
+    .search-btn{
+        background-color: transparent;
+        border:none;
+        height: 40px;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+    }
+}

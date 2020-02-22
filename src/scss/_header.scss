@@ -1,0 +1,104 @@
+.header{
+  //height: $header-height;
+  .top-block{
+    padding-top: 20px;
+    margin-bottom: 12px;
+    .top-block-wrapper{
+      display: flex;
+    }
+    .logo-block{
+      width: 156px;
+      position: relative;
+      .line-decor {
+        position: absolute;
+        transform: rotate(-45deg);
+        left: -24px;
+        top: 7px;
+        width: 120px;
+        background-color: $color-primary;
+        height: 16px;
+        &:before{
+          display: block;
+          content: "";
+          width: 30px;
+          height: 30px;
+          background-color: #ffffff;
+          position: absolute;
+          left: -16px;
+          top: -20px;
+          transform: rotate(45deg);
+        }
+      }
+      .logo-wrapper{
+        text-align: center;
+      }
+      .logo-descr{
+        line-height: 1.2;
+        font-size: 0.9rem;
+        font-style: italic;
+      }
+    }
+    .center-block{
+      width: 50%;
+      padding-left: 14px;
+      padding-right: 14px;
+      .company-name {
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: #4f4f4f;
+        line-height: 1.3;
+        margin-bottom: 8px;
+      }
+    }
+    .search-block{
+   
+    }
+    .right-block{
+      width: calc(50% - 156px);
+      display: flex;
+      justify-content: flex-end;
+      .info-block{
+        min-width: 235px;
+        width: 50%;
+        padding-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .info-item{
+          margin-bottom: 8px;
+        }
+        .icon-cell{
+          vertical-align: middle;
+          padding-right: 4px;
+        }
+        .value-cell{
+          vertical-align: top;
+        }
+        .phones-cell{
+          margin-bottom: 10px;
+        }
+        .number-name{
+          display: inline-block;
+          width: 35px;
+          font-size: 14px;
+        }
+        .phone-number{
+          font-weight: 700;
+          font-size: 1.2rem;
+        }
+      }
+      .additional-block{
+        width: 50%;
+        text-align: right;
+      }
+    }
+  }
+  .nav-block{
+    height: 60px;
+    background-color: $color-primary;
+  }
+}
+#logo{
+  width: 100px;
+  height: auto;
+}

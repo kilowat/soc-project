@@ -1,0 +1,64 @@
+@import 'icons';
+@import "variable";
+@import "~normalize.css";
+@import "~breakpoint-sass";
+@import "inputs/main.scss";
+@import "header";
+@import "footer";
+@import "sidebar";
+@import "components/top-search";
+@import "buttons";
+//@import "demo"; //demo styles
+
+$font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+*{
+  box-sizing: border-box;
+}
+body {
+  font-style: normal;
+  font-weight: 400;
+  font-family: $font-stack;
+  line-height: $base-line-height;
+}
+.container{
+  max-width: $container-max-width;
+  min-width: $container-min-width;
+  margin: auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+
+  @include breakpoint(max-width $pad-width){
+    padding-left: $container-padding-pad;
+    padding-right: $container-padding-pad;
+  }
+}
+
+main {
+  display: flex;
+  min-height: calc(100vh - #{$footer-height});
+}
+.content{
+  width: 100%;
+  &.with-sidebar{
+    width: calc(100% - #{$sidebar-left});
+    @include breakpoint(max-width $desktop-width){
+      width: 100%;
+    }
+  }
+}
+.link{
+  color: $color-primary;
+  &:hover{
+    color: $color-accent;
+  }
+}
+.table{
+  display: table;
+  width: 100%;
+}
+.table-row{
+  display: table-row;
+}
+.table-cell{
+  display: table-cell;
+}

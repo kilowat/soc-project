@@ -1,0 +1,111 @@
+<%
+    var show_sidebar;
+    var title;
+    var sidebar_html;
+    var svgPath = "/sprites/spritemap.svg"
+%>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="stylesheet" href="/css/style.bundle.css" />
+
+    <title><%=title%></title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+          <div class="top-block">
+            <div class="container">
+                <div class="top-block-wrapper">
+                    <div class="logo-block">
+                        <div class="line-decor"></div>
+                        <div class="logo-wrapper">
+                            <img src="/img/logo.png" id="logo" />
+                        </div>
+                        <div class="logo-descr">Министерство труда и социального развития Краснодарского края</div>
+                  </div>
+                  <div class="center-block">
+                      <div class="company-name">
+                        Государственное бюджетное учреждение социального обслуживания Краснодарского края
+                        «Динской комплексный центр социального обслуживания населения»
+                      </div>
+                      <div class="search-block">
+                          <div class="search">
+                              <input type="text" class="input" placeholder="Поиск">
+                              <button type="button" class="search-btn">
+                                <svg class="svg-icon">
+                                    <use xlink:href="<%=svgPath%>#sprite-search"></use>
+                                </svg>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="right-block">
+                    <div class="info-block">
+                        <div class="phones-cell info-item">
+                            <div>
+                                <span class="number-name">Тел:</span>
+                                <span class="phone-number">8-(86132) 4-45-56</span>
+                            </div>
+                            <div>
+                                <span class="number-name">Факс:</span>
+                                <span class="phone-number">8-(86132) 4-45-56</span>
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="address-cell info-item table-row">
+                                <div class="table-cell icon-cell">
+                                    <svg class="svg-icon ic-middle">
+                                        <use xlink:href="<%=svgPath%>#sprite-place"></use>
+                                    </svg>
+                                </div>
+                                <div class="table-cell value-cell">г. Краснодар, ул. им. Чапаева, д. 58</div>
+                            </div>
+                            <div class="email-cell info-item table-row">
+                                <div class="table-cell icon-cell">
+                                    <svg class="svg-icon ic-middle">
+                                        <use xlink:href="<%=svgPath%>#sprite-email"></use>
+                                    </svg>
+                                </div>
+                                <div class="table-cell value-cell">
+                                    <a href="to:msrsp@krasnodar.ru" class="link" title="msrsp@krasnodar.ru">msrsp@krasnodar.ru</a>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="additional-block">
+                        <div class="info-item">
+                            <button class="question-btn">Задать вопрос</button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="nav-block">
+              <div class="container">
+
+              </div>
+          </div>
+      </header>
+      <main class="container">
+          <%if(show_sidebar){%>
+            <aside class="sidebar-left">
+                <%=sidebar_html%>
+            </aside>
+          <%}%>
+          <div class="content <%if(show_sidebar){%>with-sidebar<%}%>">
+              <nav>
+                  <ul>
+                      <li>
+                          <a href="/index.html" title="Главная">Главная</a>
+                      </li>
+                      <li>
+                          <a href="/second-page.html" title="Second page">Second page</a>
+                      </li>
+                  </ul>
+              </nav>
