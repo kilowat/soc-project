@@ -2,7 +2,29 @@
     var show_sidebar;
     var title;
     var sidebar_html;
-    var svgPath = "/sprites/spritemap.svg"
+    var svgPath = "/sprites/spritemap.svg";
+    var navItems = [
+        {
+            name: "Главная",
+            link: "#"
+        },
+        {
+            name: "Новости",
+            link: "#"
+        },
+        {
+            name: "Информационные материалы",
+            link: "#"
+        },
+        {
+            name: "Фотогалерея",
+            link: "#"
+        },
+        {
+            name: "Отзывы",
+            link: "#"
+        }
+    ];
 %>
 <!DOCTYPE html>
 <html lang="ru">
@@ -37,7 +59,7 @@
                           <div class="search">
                               <input type="text" class="input" placeholder="Поиск">
                               <button type="button" class="search-btn">
-                                <svg class="svg-icon">
+                                <svg class="svg-icon icon-grey">
                                     <use xlink:href="<%=svgPath%>#sprite-search"></use>
                                 </svg>
                               </button>
@@ -59,15 +81,17 @@
                         <div class="table">
                             <div class="address-cell info-item table-row">
                                 <div class="table-cell icon-cell">
-                                    <svg class="svg-icon ic-middle">
+                                    <svg class="svg-icon ic-middle icon-grey">
                                         <use xlink:href="<%=svgPath%>#sprite-place"></use>
                                     </svg>
                                 </div>
-                                <div class="table-cell value-cell">г. Краснодар, ул. им. Чапаева, д. 58</div>
+                                <div class="table-cell address-value value-cell">
+                                    г. Краснодар, ул. им. Чапаева, д. 58
+                                </div>
                             </div>
                             <div class="email-cell info-item table-row">
                                 <div class="table-cell icon-cell">
-                                    <svg class="svg-icon ic-middle">
+                                    <svg class="svg-icon ic-middle icon-grey">
                                         <use xlink:href="<%=svgPath%>#sprite-email"></use>
                                     </svg>
                                 </div>
@@ -88,7 +112,15 @@
           </div>
           <div class="nav-block">
               <div class="container">
-
+                <nav id="main-nav">
+                    <ul>
+                        <%for(var i=0; i<navItems.length; i++){%>
+                            <li>
+                                <a href="<%=navItems[i].link%>" title="<%=navItems[i].name%>"><%=navItems[i].name%></a>
+                            </li>
+                        <%}%>
+                    </ul>
+                </nav>
               </div>
           </div>
       </header>
@@ -99,13 +131,3 @@
             </aside>
           <%}%>
           <div class="content <%if(show_sidebar){%>with-sidebar<%}%>">
-              <nav>
-                  <ul>
-                      <li>
-                          <a href="/index.html" title="Главная">Главная</a>
-                      </li>
-                      <li>
-                          <a href="/second-page.html" title="Second page">Second page</a>
-                      </li>
-                  </ul>
-              </nav>

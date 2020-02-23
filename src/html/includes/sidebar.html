@@ -1,7 +1,76 @@
-<ul>
-    <%for(var i = 0; i < 10; i++){%>
+<%
+    var links = [
+        {
+            name: "Общие сведения о поставщике социальных услуг",
+            link: "#",
+            child: [
+                {
+                    name: "Общие данные",
+                    link: '#'
+                },
+                {
+                    name: "Кадровое обеспечение",
+                    link: '#'
+                },
+                {
+                    name: "Нормативная документация",
+                    link: '#'
+                },
+                {
+                    name: "Материально-техническое обеспечение социальных услуг",
+                    link: '#'
+                },
+                {
+                    name: "Структура и органы управления",
+                    link: '#'
+                },
+            ]
+        },
+        {
+            name: "Общие сведения о поставщике социальных услуг",
+            link: "#",
+            child: [
+                {
+                    name: "Общие данные",
+                    link: '#'
+                },
+                {
+                    name: "Кадровое обеспечение",
+                    link: '#'
+                },
+                {
+                    name: "Нормативная документация",
+                    link: '#'
+                },
+                {
+                    name: "Материально-техническое обеспечение социальных услуг",
+                    link: '#'
+                },
+                {
+                    name: "Структура и органы управления",
+                    link: '#'
+                },
+            ]
+        }
+    ];
+%>
+
+<ul id="left-menu">
+    <%for(var i = 0; i < links.length; i++){%>
         <li>
-            Example text
+            <a href="#" title="<%=links[i].name%>" class="root">
+                <%=links[i].name%>
+                <i class="fa fa-angle-down"></i>
+                <ul class="hide">
+                    <%for(var j = 0; j < links[i].child.length; j++){%>
+                        <li>
+                            <a href="<%=links[i].child[j].link%>" title="<%=links[i].child[j].name%>">
+                                <%=links[i].child[j].name%>
+                            </a>
+                        </li>
+                    <%}%>
+                </ul>
+            </a>
         </li>
     <%}%>
 </ul>

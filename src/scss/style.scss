@@ -7,7 +7,11 @@
 @import "footer";
 @import "sidebar";
 @import "components/top-search";
+@import "components/main-nav";
 @import "buttons";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+@import "components/main-slider";
 //@import "demo"; //demo styles
 
 $font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans", "Helvetica Neue", sans-serif;
@@ -19,6 +23,7 @@ body {
   font-weight: 400;
   font-family: $font-stack;
   line-height: $base-line-height;
+  color: $color-dark;
 }
 .container{
   max-width: $container-max-width;
