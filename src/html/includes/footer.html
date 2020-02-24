@@ -1,5 +1,32 @@
 <%
   var show_map;
+  var svgPath = "/sprites/spritemap.svg";
+  var navItems = [
+  {
+      name: "Главная",
+      link: "#"
+  },
+  {
+      name: "События и мероприятия",
+      link: "#"
+  },
+  {
+      name: "Информационные материалы",
+      link: "#"
+  },
+  {
+      name: "Фотогалерея",
+      link: "#"
+  },
+  {
+      name: "Об учреждении",
+      link: "#"
+  },
+  {
+      name: "Отзывы",
+      link: "#"
+  }
+];
 %>
           </div>
         </main>
@@ -8,7 +35,111 @@
             <div class="demo-text">Яндекс карта</div>
           </div>
         <%}%> 
-        <footer class="footer"></footer>
+        <footer class="footer">
+          <div class="container">
+            <div class="menu-block">
+                <ul>
+                  <%for(var i=0; i<navItems.length; i++){%>
+                      <li>
+                          <a href="<%=navItems[i].link%>" title="<%=navItems[i].name%>"><%=navItems[i].name%></a>
+                      </li>
+                  <%}%>
+              </ul>
+            </div>
+            <div class="info-block">
+              <div class="flex-wrapper">
+                <div class="info-cell">
+                  <div class="info-text">
+                    <span class="small-text"><span>УЧРЕДИТЕЛЬ:</span> МИНИСТЕРСТВО ТРУДА И СОЦИАЛЬНОГО РАЗВИТИЯ КРАСНОДАРСКОГО КРАЯ</span>
+  
+                    <div class="table info-table">
+                      <div class="phone-cell info-item table-row">
+                        <div class="table-cell icon-cell">
+                            <svg class="svg-icon ic-middle icon-white">
+                                <use xlink:href="<%=svgPath%>#sprite-place"></use>
+                            </svg>
+                        </div>
+                        <div class="table-cell address-value value-cell">
+                            8 861 32 2-23-44
+                        </div>
+                    </div>
+                      <div class="address-cell info-item table-row">
+                          <div class="table-cell icon-cell">
+                              <svg class="svg-icon ic-middle icon-white">
+                                  <use xlink:href="<%=svgPath%>#sprite-place"></use>
+                              </svg>
+                          </div>
+                          <div class="table-cell address-value value-cell">
+                              г. Краснодар, ул. им. Чапаева, д. 58
+                          </div>
+                      </div>
+                      <div class="email-cell info-item table-row">
+                          <div class="table-cell icon-cell">
+                              <svg class="svg-icon ic-middle icon-white">
+                                  <use xlink:href="<%=svgPath%>#sprite-email"></use>
+                              </svg>
+                          </div>
+                          <div class="table-cell value-cell">
+                              <a href="to:msrsp@krasnodar.ru" class="link" title="msrsp@krasnodar.ru">msrsp@krasnodar.ru</a>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="info-cell">
+                  <div class="info-text">
+                    <span class="small-text">ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ СОЦИАЛЬНОГО ОБСЛУЖИВАНИЯ КРАСНОДАРСКОГО КРАЯ «СЛАВЯНСКИЙ КОМПЛЕКСНЫЙ ЦЕНТР СОЦИАЛЬНОГО ОБСЛУЖИВАНИЯ НАСЕЛЕНИЯ»</span>  
+                    <div class="table info-table">
+                      <div class="phone-cell info-item table-row">
+                        <div class="table-cell icon-cell">
+                            <svg class="svg-icon ic-middle icon-white">
+                                <use xlink:href="<%=svgPath%>#sprite-place"></use>
+                            </svg>
+                        </div>
+                        <div class="table-cell address-value value-cell">
+                            8 861 32 2-23-44
+                        </div>
+                    </div>
+                      <div class="address-cell info-item table-row">
+                          <div class="table-cell icon-cell">
+                              <svg class="svg-icon ic-middle icon-white">
+                                  <use xlink:href="<%=svgPath%>#sprite-place"></use>
+                              </svg>
+                          </div>
+                          <div class="table-cell address-value value-cell">
+                              г. Краснодар, ул. им. Чапаева, д. 58
+                          </div>
+                      </div>
+                      <div class="email-cell info-item table-row">
+                          <div class="table-cell icon-cell">
+                              <svg class="svg-icon ic-middle icon-white">
+                                  <use xlink:href="<%=svgPath%>#sprite-email"></use>
+                              </svg>
+                          </div>
+                          <div class="table-cell value-cell">
+                              <a href="to:msrsp@krasnodar.ru" class="link" title="msrsp@krasnodar.ru">msrsp@krasnodar.ru</a>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="info-cell">
+                  <div class="info-text">
+                    <button>Задать вопрос</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-block">
+              <div class="coop">
+                © 2020 Государственное бюджетное учреждение социального обслуживания Краснодарского края «Славянский комплексный центр социального обслуживания населения»
+              </div>
+              <div class="dev">
+                <a href="#" title="">Разработка ООО Фирма</a>
+              </div>
+            </div>
+          </div>
+        </footer>
     </div>
     <script src="/js/bundle.js"></script>
   </body>
