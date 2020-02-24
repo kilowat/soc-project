@@ -1,22 +1,3 @@
-.question-btn {
-	background-color:#007dc1;
-	border:1px solid #124d77;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-size:18px;
-	padding:15px 18px;
-	text-decoration:none;
-	&:hover {
-		background-color:$color-accent;
-		border-color: $color-accent-hover;
-	}
-	&:active {
-		position:relative;
-		top:1px;
-	}
-}
-
 .btn{
 	display:inline-block;
 	cursor:pointer;
@@ -29,9 +10,29 @@
 		position:relative;
 		top:1px;
 	}
+	&.btn-ex-big{
+		font-size:18px;
+		padding:15px 18px;
+	}
 	&.btn-blue{
 		background-color:#007dc1;
 		border:1px solid #124d77;
+		&:hover {
+			background-color:$color-accent;
+			border-color: $color-accent-hover;
+		}
+	}
+	&.btn-accent{
+		background-color: $color-accent;
+		border:1px solid $color-accent-hover;
+		&:hover {
+			background-color:$color-accent-hover;
+		}
+	}
+	&.btn-transparent-white{
+		background-color: transparent;
+		border:1px solid #fff;
+		color: #fff;
 		&:hover {
 			background-color:$color-accent;
 			border-color: $color-accent-hover;

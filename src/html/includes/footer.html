@@ -30,11 +30,6 @@
 %>
           </div>
         </main>
-        <%if(show_map){%>
-          <div id="ya-map">
-            <div class="demo-text">Яндекс карта</div>
-          </div>
-        <%}%> 
         <footer class="footer">
           <div class="container">
             <div class="menu-block">
@@ -56,13 +51,23 @@
                       <div class="phone-cell info-item table-row">
                         <div class="table-cell icon-cell">
                             <svg class="svg-icon ic-middle icon-white">
-                                <use xlink:href="<%=svgPath%>#sprite-place"></use>
+                                <use xlink:href="<%=svgPath%>#sprite-phone_enabled"></use>
                             </svg>
                         </div>
                         <div class="table-cell address-value value-cell">
                             8 861 32 2-23-44
                         </div>
-                    </div>
+                      </div>
+                      <div class="phone-cell info-item table-row">
+                        <div class="table-cell icon-cell">
+                            <svg class="svg-icon ic-middle icon-white">
+                                <use xlink:href="<%=svgPath%>#sprite-phone_enabled"></use>
+                            </svg>
+                        </div>
+                        <div class="table-cell address-value value-cell">
+                            8 861 32 2-23-44
+                        </div>
+                      </div>
                       <div class="address-cell info-item table-row">
                           <div class="table-cell icon-cell">
                               <svg class="svg-icon ic-middle icon-white">
@@ -93,7 +98,7 @@
                       <div class="phone-cell info-item table-row">
                         <div class="table-cell icon-cell">
                             <svg class="svg-icon ic-middle icon-white">
-                                <use xlink:href="<%=svgPath%>#sprite-place"></use>
+                                <use xlink:href="<%=svgPath%>#sprite-phone_enabled"></use>
                             </svg>
                         </div>
                         <div class="table-cell address-value value-cell">
@@ -125,7 +130,7 @@
                 </div>
                 <div class="info-cell">
                   <div class="info-text">
-                    <button>Задать вопрос</button>
+                    <button class="btn btn-transparent-white">Задать вопрос</button>
                   </div>
                 </div>
               </div>

@@ -13,7 +13,10 @@
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 @import "components/main-slider";
 @import "components/left-menu";
+@import "components/work-time";
 @import "pages/index";
+@import "../lib/slick/slick.scss";
+@import "../lib/slick/slick-theme.scss";
 //@import "demo"; //demo styles
 
 $font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans", "Helvetica Neue", sans-serif;

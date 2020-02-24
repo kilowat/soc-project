@@ -68,6 +68,7 @@ const config = {
         modules: ["node_modules", "spritesmith-generated"],
         alias: {
             'vue$': isDev ? 'vue/dist/vue.js' : 'vue/dist/vue.min.js',
+            'slick': './src/libs/slick/slick.min.js'
         }
     },
     module: {

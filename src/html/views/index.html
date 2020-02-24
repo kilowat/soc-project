@@ -15,6 +15,62 @@
       text: "В торжественной церемонии открытия приняли участие заместитель губернатора Кубани Анатолий Вороновский, первый заместитель министра труда и социального развития Краснодарского края Евгений Наумов...",
       url: "#",
       img: "/img/slide-1.jpg"
+    },
+        {
+      name: "Армавирский реабилитационный центр оборудован новой котельной",
+      text: "В торжественной церемонии открытия приняли участие заместитель губернатора Кубани Анатолий Вороновский, первый заместитель министра труда и социального развития Краснодарского края Евгений Наумов...",
+      url: "#",
+      img: "/img/slide-1.jpg"
+    }
+  ];
+  var links = [
+    {
+      img: "/img/gu.jpg",
+      name: "Название",
+      link: "#"
+      
+    },
+    {
+      img: "/img/gu.jpg",
+      name: "Название",
+      link: "#"
+      
+    },
+    {
+      img: "/img/gu.jpg",
+      name: "Название",
+      link: "#"
+      
+    },
+    {
+      img: "/img/gu.jpg",
+      name: "Название",
+      link: "#"
+      
+    },
+    {
+      img: "/img/gu.jpg",
+      name: "Название",
+      link: "#"
+      
+    },
+    {
+      img: "/img/gu.jpg",
+      name: "Название",
+      link: "#"
+      
+    },
+    {
+      img: "/img/gu.jpg",
+      name: "Название",
+      link: "#"
+      
+    },
+    {
+      img: "/img/gu.jpg",
+      name: "Название",
+      link: "#"
+      
     }
   ];
 %>
@@ -51,7 +107,6 @@
     document.addEventListener("DOMContentLoaded", function(event) { 
       new Glide('.glide').mount()
     });
-    
   </script>
 
   <section class="about section-block">
@@ -67,8 +122,39 @@
     
     </div>
     <div class="detail-link">
-      <a href="" title="" class="btn btn-blue">Подробней</a>
+      <a href="" title="" class="btn btn-accent">Подробней</a>
     </div>
   </section>
 
+  <section class="map section-block">
+    <h2 class="section-header">Как нас найти</h2>
+    <div id="ya-map">
+      <div class="demo-text">Яндекс карта</div>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2 class="section-header">Полезный ссылки</h2>
+    <div class="links-slider">
+      <% for(var i = 0; i < links.length; i++){%>
+        <div class="link-slide">
+          <div class="link-pic">
+            <a href="" title=""><img src="<%=links[i].img%>" alt=""></a>
+          </div>
+          <div class="link-name">
+            <a href="" title=""><%=links[i].name%></a>
+          </div>
+        </div>
+      <%}%>
+    </div>
+    <script type="application/javascript">
+      document.addEventListener("DOMContentLoaded", function(event) { 
+        $('.links-slider').not('.slick-initialized').slick({
+          infinite: true,
+            slidesToShow: 6,
+            slidesToScroll: 1
+        })
+      });
+    </script>
+  </section>
 <%= _.template(require('./../includes/footer.html').default)(data) %>

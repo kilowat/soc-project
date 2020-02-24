@@ -1,8 +1,10 @@
-import jQuery from "jquery";
+import $ from "jquery";
 import Glide from '@glidejs/glide'
+
 import Vue from 'vue';
 import ExampleComponent from '../vue-components/ExampleComponent.vue';
 
+import '../lib/slick/slick.min.js';
 
 
 
@@ -15,7 +17,7 @@ const vue_app = new Vue({
 
 window.vue_app = vue_app;
 window.Glide = Glide;
-
-jQuery(function() {
+window.$ = $;
+$(function() {
   //jQuery("body").css("color", "blue");
 });
