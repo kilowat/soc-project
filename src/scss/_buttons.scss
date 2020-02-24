@@ -1,5 +1,4 @@
 .question-btn {
-	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
 	background-color:#007dc1;
 	border:1px solid #124d77;
 	display:inline-block;
@@ -8,15 +7,35 @@
 	font-size:18px;
 	padding:15px 18px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #154682;
-}
-.question-btn:hover {
-	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
-	background-color:#0061a7;
-}
-.question-btn:active {
-	position:relative;
-	top:1px;
+	&:hover {
+		background-color:$color-accent;
+		border-color: $color-accent-hover;
+	}
+	&:active {
+		position:relative;
+		top:1px;
+	}
 }
 
+.btn{
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:1rem;
+	padding:0.4em 0.8em;
+	text-decoration:none;
+
+	&:active {
+		position:relative;
+		top:1px;
+	}
+	&.btn-blue{
+		background-color:#007dc1;
+		border:1px solid #124d77;
+		&:hover {
+			background-color:$color-accent;
+			border-color: $color-accent-hover;
+		}
+	}	
+}
         

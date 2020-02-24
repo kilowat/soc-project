@@ -1,0 +1,30 @@
+.about{
+    .about-content{
+        display: flex;
+        p:first-child{
+            margin-top:0;
+        }
+    }
+    .about-pic-wrapper{
+        text-align: center;
+    }
+    .about-pic{
+        height: auto;
+        max-width: 300px;
+        border: 1px solid #ccc;
+    }
+    .detail-link{
+        margin-top: 12px;
+    }
+}
+#ya-map{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff6ba;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}

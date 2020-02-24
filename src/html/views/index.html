@@ -2,7 +2,8 @@
   var data = {
     title: "Главная",
     show_sidebar: true,
-    sidebar_html : _.template(require('./../includes/sidebar.html').default)()
+    sidebar_html : _.template(require('./../includes/sidebar.html').default)(),
+    show_map: true,
   };
   var news ={
     "name": "Название",
@@ -19,7 +20,7 @@
 %>
 <%= _.template(require('./../includes/header.html').default)(data) %>
 
-<section>
+
   <div class="main-slider">
     <div class="glide">
       <div class="glide__track" data-glide-el="track">
@@ -52,6 +53,22 @@
     });
     
   </script>
-</section>
 
-<%= _.template(require('./../includes/footer.html').default)() %>
+  <section class="about section-block">
+    <h1 class="section-header">Об учреждении</h1>
+    <div class="about-content">
+      <div class="about-text">
+        <p><b>Государственное бюджетное учреждение социального обслуживания Краснодарского края «Динской комплексный центр социального обслуживания населения»</b> осуществляет свою деятельность с 1998 года. Сегодня - это целостный подход к созданию условий для повышения качества жизни граждан на основе развития сети, внедрения инновационных форм работы и стратегий ухода, обеспечения доступности социальной помощи нуждающимся людям.</p>
+        <p>Динской комплексный центр социального обслуживания населения является самостоятельным юридическим лицом, находящимся в ведении министерства труда и социального развития Краснодарского края.</p>
+      </div>
+      <div class="about-pic-wrapper">
+        <img src="/img/about-pic.jpg" class="about-pic" alt="">
+      </div>
+    
+    </div>
+    <div class="detail-link">
+      <a href="" title="" class="btn btn-blue">Подробней</a>
+    </div>
+  </section>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

@@ -58,19 +58,17 @@
 <ul id="left-menu">
     <%for(var i = 0; i < links.length; i++){%>
         <li>
-            <a href="#" title="<%=links[i].name%>" class="root">
-                <%=links[i].name%>
-                <i class="fa fa-angle-down"></i>
-                <ul class="hide">
-                    <%for(var j = 0; j < links[i].child.length; j++){%>
-                        <li>
-                            <a href="<%=links[i].child[j].link%>" title="<%=links[i].child[j].name%>">
-                                <%=links[i].child[j].name%>
-                            </a>
-                        </li>
-                    <%}%>
-                </ul>
+            <a href="#" title="<%=links[i].name%>" class="root"><%=links[i].name%>
             </a>
+            <ul class="hide">
+                <%for(var j = 0; j < links[i].child.length; j++){%>
+                    <li>
+                        <a href="<%=links[i].child[j].link%>" title="<%=links[i].child[j].name%>">
+                            <%=links[i].child[j].name%>
+                        </a>
+                    </li>
+                <%}%>
+            </ul>
         </li>
     <%}%>
 </ul>
