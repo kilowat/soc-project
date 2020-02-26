@@ -17,17 +17,9 @@
             link: "/info-materials.html"
         },
         {
-            name: "Фотогалерея",
-            link: "#"
-        },
-        {
             name: "Об учреждении",
             link: "#"
         },
-        {
-            name: "Отзывы",
-            link: "#"
-        }
     ];
 %>
 <!DOCTYPE html>
@@ -43,35 +35,45 @@
   </head>
   <body>
     <div id="app">
-      <header class="header">
-          <div class="mobile-block">
-              <div class="container">
-                  <div class="top-menu-block">
-                    <drawer-menu>
-                        <div id="mobile-menu">
-                            <ul>
-                                <li>
-                                    <a href="" title="">Ссылка</a>
-                                </li>
-                                <li>
-                                    <a href="" title="">Ссылка</a>
-                                </li>
-                                <li>
-                                    <a href="" title="">Ссылка</a>
-                                </li>
-                                <li>
-                                    <a href="" title="">Ссылка</a>
-                                </li>
-                                <li>
-                                    <a href="" title="">Ссылка</a>
-                                </li>
-                            </ul>
+        <header class="header">
+            <div class="mobile-block">
+                <div class="container">
+                    <div class="flex-wrapper">
+                        <div class="top-menu-block">
+                            <drawer-menu>
+                                <div id="mobile-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="" title="">Ссылка</a>
+                                        </li>
+                                        <li>
+                                            <a href="" title="">Ссылка</a>
+                                        </li>
+                                        <li>
+                                            <a href="" title="">Ссылка</a>
+                                        </li>
+                                        <li>
+                                            <a href="" title="">Ссылка</a>
+                                        </li>
+                                        <li>
+                                            <a href="" title="">Ссылка</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </drawer-menu>
                         </div>
-                    </drawer-menu>
-                  </div>
-              </div>
-          </div>
-          <div class="top-block">
+                        <div class="m-phone-number-block">
+                            <div class="phone-number-m">
+                                <svg class="svg-icon ic-middle icon-white">
+                                    <use xlink:href="<%=svgPath%>#sprite-phone_enabled"></use>
+                                </svg>
+                                <a>8 86132 3-44-55</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-block">
             <div class="container">
                 <div class="top-block-wrapper">
                     <div class="logo-block">
@@ -80,24 +82,24 @@
                             <img src="/img/logo.png" id="logo" />
                         </div>
                         <div class="logo-descr">Министерство труда и социального развития Краснодарского края</div>
-                  </div>
-                  <div class="center-block">
-                      <div class="company-name">
+                    </div>
+                    <div class="center-block">
+                        <div class="company-name">
                         Государственное бюджетное учреждение социального обслуживания Краснодарского края
                         «Динской комплексный центр социального обслуживания населения»
-                      </div>
-                      <div class="search-block">
-                          <div class="search">
-                              <input type="text" class="input" placeholder="Поиск">
-                              <button type="button" class="search-btn">
+                        </div>
+                        <div class="search-block">
+                            <div class="search">
+                                <input type="text" class="input" placeholder="Поиск">
+                                <button type="button" class="search-btn">
                                 <svg class="svg-icon icon-grey">
                                     <use xlink:href="<%=svgPath%>#sprite-search"></use>
                                 </svg>
-                              </button>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="right-block">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-block">
                     <div class="info-block">
                         <div class="phones-cell info-item">
                             <div>
@@ -131,18 +133,18 @@
                                 </div>
                             </div>
                         </div>
-                      </div>
-                      <div class="additional-block">
+                        </div>
+                        <div class="additional-block">
                         <div class="info-item">
                             <button class="btn btn-ex-big btn-accent">Задать вопрос</button>
                         </div>
-                      </div>
-                  </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-          </div>
-          <div class="nav-block">
-              <div class="container">
+            </div>
+            <div class="nav-block">
+                <div class="container">
                 <nav id="main-nav">
                     <ul>
                         <%for(var i=0; i<navItems.length; i++){%>
@@ -152,14 +154,14 @@
                         <%}%>
                     </ul>
                 </nav>
-              </div>
-          </div>
-      </header>
-      <main class="container" id="page-wrap">
-          <%if(show_sidebar){%>
-            <aside class="sidebar-left">
-                <%=sidebar_html%>
-            </aside>
-          <%}%>
-          <div class="content <%if(show_sidebar){%>with-sidebar<%}%>">
+                </div>
+            </div>
+        </header>
+        <main class="container" id="page-wrap">
+            <%if(show_sidebar){%>
+                <aside class="sidebar-left">
+                    <%=sidebar_html%>
+                </aside>
+            <%}%>
+            <div class="content <%if(show_sidebar){%>with-sidebar<%}%>">
             

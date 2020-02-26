@@ -1,6 +1,30 @@
 #mobile-menu{
     display: none;
 }
+.m-phone-number-block{
+    .phone-number-m{
+        a{
+            color: $color-white;
+        }
+    }
+}
+.mobile-block{
+    display: none;
+    @include breakpoint(max-width $desktop-width){
+        display: block;
+    }
+}
+.mobile-block .flex-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: $mobile-header-height;
+    .svg-icon{
+        position: relative;
+        top: 4px;
+    }
+}
 .top-menu-block{
     .bm-burger-button {
         top: 10px;

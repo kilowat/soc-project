@@ -9,5 +9,27 @@
 <%= _.template(require('./../includes/header.html').default)(data) %>
     <%= _.template(require('./../includes/breadcrumbs.html').default)() %>
 
+    <section class="doc-cmp">
+      <h2 class="section-name">Детальная страница</h2>
+      <div class="doc-list table table-blue">
+        <div class="doc-item table-row row-header">
+          <div class="doc-name table-cell">Название</div>
+          <div class="doc-download table-cell">Приложение</div>
+        </div>
+        <%for(var i = 0; i < 20; i++){%>
+          <div class="doc-item table-row row-body">
+            <div class="doc-name table-cell">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste nihil</div>
+            <div class="doc-download table-cell">
+              <a href="" title="">
+                <svg class="svg-icon ic-middle icon-grey">
+                  <use xlink:href="<%=htmlWebpackPlugin.options.svgPath%>#sprite-download"></use>
+                </svg>
+                скачать (3.5 мб)
+              </a>
+            </div>
+          </div>
+        <%}%>
+      </div>
+    </section>
 
 <%= _.template(require('./../includes/footer.html').default)(data) %>

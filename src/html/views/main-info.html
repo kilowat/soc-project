@@ -1,0 +1,56 @@
+<%
+    var data = {
+        title: "Детальная материалы",
+        show_sidebar: true,
+        sidebar_html : _.template(require('./../includes/sidebar.html').default)(),
+        show_map: true,
+    };
+    var main_info = [
+        {
+            name: "Полное наименование учреждения",
+            value: "осударственное бюджетное учреждение социального обслуживания Краснодарского края «Туапсинский комплексный центр социального обслуживания населения»"
+        },
+        {
+            name: "Краткое наименование учреждения",
+            value: "ГБУ СО КК «Туапсинский КЦСОН»"
+        },
+        {
+            name: "Полное наименование учреждения",
+            value: "осударственное бюджетное учреждение социального обслуживания Краснодарского края «Туапсинский комплексный центр социального обслуживания населения»"
+        },
+        {
+            name: "Краткое наименование учреждения",
+            value: "ГБУ СО КК «Туапсинский КЦСОН»"
+        },
+        {
+            name: "Полное наименование учреждения",
+            value: "осударственное бюджетное учреждение социального обслуживания Краснодарского края «Туапсинский комплексный центр социального обслуживания населения»"
+        },
+        {
+            name: "Дата гос. регистрации",
+            value: "30.09.1996 г."
+        },
+        {
+            name: "e-mail",
+            value: "<a href='' title=''>cso_chernomor@mtsr.krasnodar.ru</a>"
+        }
+    ]
+%>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+    <%= _.template(require('./../includes/breadcrumbs.html').default)() %>
+
+    <section class="main-info">
+      <h2 class="section-name">Детальная страница</h2>
+      <div class="main-info-props-list">
+        <ul>
+            <%for(var i = 0; i < main_info.length; i++){%>
+                <li class="prop-item">
+                    <span class="prop-name"><%=main_info[i].name%>:</span>
+                    <span class="prop-value"><%=main_info[i].value%></span>
+                </li>
+            <%}%>
+        </ul>
+      </div>
+    </section>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

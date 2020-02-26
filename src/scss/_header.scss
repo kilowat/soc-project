@@ -2,7 +2,7 @@
   //height: $header-height;
   @include breakpoint(max-width $desktop-width){
     background-color: $color-primary;
-    height: 50px;
+    height: $mobile-header-height;
     position: fixed;
     left: 0;
     top: 0;

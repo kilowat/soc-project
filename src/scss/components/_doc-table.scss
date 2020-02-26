@@ -1,0 +1,29 @@
+.doc-cmp{
+    .row-header{
+        .table-cell{
+            background-color: $color-primary;
+            color: $color-white;
+        }
+    }
+    .row-body{
+        .doc-name{
+            width: 78%;
+        }
+        .doc-download{  
+            a{
+                text-decoration: none;
+                color: $color-dark;
+                .svg-icon{
+                    position: relative;
+                    top: 4px;
+                }
+                &:hover{
+                    color: $color-accent;
+                    svg{
+                        fill: $color-accent;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -23,56 +23,6 @@
       img: "/img/slide-1.jpg"
     }
   ];
-  var links = [
-    {
-      img: "/img/gu.jpg",
-      name: "Название",
-      link: "#"
-      
-    },
-    {
-      img: "/img/gu.jpg",
-      name: "Название",
-      link: "#"
-      
-    },
-    {
-      img: "/img/gu.jpg",
-      name: "Название",
-      link: "#"
-      
-    },
-    {
-      img: "/img/gu.jpg",
-      name: "Название",
-      link: "#"
-      
-    },
-    {
-      img: "/img/gu.jpg",
-      name: "Название",
-      link: "#"
-      
-    },
-    {
-      img: "/img/gu.jpg",
-      name: "Название",
-      link: "#"
-      
-    },
-    {
-      img: "/img/gu.jpg",
-      name: "Название",
-      link: "#"
-      
-    },
-    {
-      img: "/img/gu.jpg",
-      name: "Название",
-      link: "#"
-      
-    }
-  ];
 %>
 <%= _.template(require('./../includes/header.html').default)(data) %>
 
@@ -114,15 +64,14 @@
     <div class="about-content">
       <div class="about-text">
         <p><b>Государственное бюджетное учреждение социального обслуживания Краснодарского края «Динской комплексный центр социального обслуживания населения»</b> осуществляет свою деятельность с 1998 года. Сегодня - это целостный подход к созданию условий для повышения качества жизни граждан на основе развития сети, внедрения инновационных форм работы и стратегий ухода, обеспечения доступности социальной помощи нуждающимся людям.</p>
-        <p>Динской комплексный центр социального обслуживания населения является самостоятельным юридическим лицом, находящимся в ведении министерства труда и социального развития Краснодарского края.</p>
+        <div class="detail-link">
+          <a href="" title="" class="btn btn-accent">Подробней</a>
+        </div>
       </div>
       <div class="about-pic-wrapper">
         <img src="/img/about-pic.jpg" class="about-pic" alt="">
       </div>
     
-    </div>
-    <div class="detail-link">
-      <a href="" title="" class="btn btn-accent">Подробней</a>
     </div>
   </section>
 
@@ -131,63 +80,5 @@
     <div id="ya-map">
       <div class="demo-text">Яндекс карта</div>
     </div>
-  </section>
-
-  <section class="section-block">
-    <h2 class="section-header">Полезный ссылки</h2>
-    <div class="links-slider ajax-loading not-loading">
-      <% for(var i = 0; i < links.length; i++){%>
-        <div class="link-slide">
-          <div class="link-pic">
-            <a href="" title=""><img src="<%=links[i].img%>" alt=""></a>
-          </div>
-          <div class="link-name">
-            <a href="" title=""><%=links[i].name%></a>
-          </div>
-        </div>
-      <%}%>
-    </div>
-    <script type="application/javascript">
-      document.addEventListener("DOMContentLoaded", function(event) { 
-        $('.links-slider').on('init', function(event, slick){
-          $('.links-slider').removeClass('not-loading')
-            console.log('res');
-        });
-        $('.links-slider').not('.slick-initialized').slick({
-          infinite: true,
-            slidesToShow: 6,
-            slidesToScroll: 1,
-            dots: true,
-            responsive: [
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 3,
-                  infinite: true,
-                  dots: true
-                }
-              },
-              {
-                breakpoint: 600,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2
-                }
-              },
-              {
-                breakpoint: 480,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
-                }
-              }
-              // You can unslick at a given breakpoint now by adding:
-              // settings: "unslick"
-              // instead of a settings object
-            ]
-        })
-      });
-    </script>
   </section>
 <%= _.template(require('./../includes/footer.html').default)(data) %>

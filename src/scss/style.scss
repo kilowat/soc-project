@@ -5,6 +5,13 @@ $font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans", "Helvetica 
 *{
   box-sizing: border-box;
 }
+a{
+  color: $color-primary;
+  text-decoration: none;
+  &:hover{
+    color: $color-accent;
+  }
+}
 body {
   font-style: normal;
   font-weight: 400;
@@ -44,6 +51,9 @@ main {
 }
 .section-name{
   text-align: center;
+  @include breakpoint(max-width $pad-width){
+    font-size: 1.2em;
+  }
 }
 .section-header{
   text-align: center;

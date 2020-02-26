@@ -2,34 +2,143 @@
   var show_map;
   var svgPath = "/sprites/spritemap.svg";
   var navItems = [
+    {
+        name: "Главная",
+        link: "#"
+    },
+    {
+        name: "События и мероприятия",
+        link: "#"
+    },
+    {
+        name: "Информационные материалы",
+        link: "#"
+    },
+    {
+        name: "Фотогалерея",
+        link: "#"
+    },
+    {
+        name: "Об учреждении",
+        link: "#"
+    },
+    {
+        name: "Отзывы",
+        link: "#"
+    }
+  ];
+  var links = [
   {
-      name: "Главная",
-      link: "#"
+    img: "/img/gu.jpg",
+    name: "Название",
+    link: "#"
+    
   },
   {
-      name: "События и мероприятия",
-      link: "#"
+    img: "/img/gu.jpg",
+    name: "Название",
+    link: "#"
+    
   },
   {
-      name: "Информационные материалы",
-      link: "#"
+    img: "/img/gu.jpg",
+    name: "Название",
+    link: "#"
+    
   },
   {
-      name: "Фотогалерея",
-      link: "#"
+    img: "/img/gu.jpg",
+    name: "Название",
+    link: "#"
+    
   },
   {
-      name: "Об учреждении",
-      link: "#"
+    img: "/img/gu.jpg",
+    name: "Название",
+    link: "#"
+    
   },
   {
-      name: "Отзывы",
-      link: "#"
+    img: "/img/gu.jpg",
+    name: "Название",
+    link: "#"
+    
+  },
+  {
+    img: "/img/gu.jpg",
+    name: "Название",
+    link: "#"
+    
+  },
+  {
+    img: "/img/gu.jpg",
+    name: "Название",
+    link: "#"
+    
   }
-];
+  ];
 %>
           </div>
         </main>
+        <section class="links-block">
+          <div class="container">
+            <h2 class="section-header">Полезные ссылки</h2>
+            <div class="links-slider ajax-loading not-loading">
+              <% for(var i = 0; i < links.length; i++){%>
+                <div class="link-slide">
+                  <div class="link-pic">
+                    <a href="" title=""><img src="<%=links[i].img%>" alt=""></a>
+                  </div>
+                  <div class="link-name">
+                    <a href="" title=""><%=links[i].name%></a>
+                  </div>
+                </div>
+              <%}%>
+            </div>
+            <script type="application/javascript">
+              document.addEventListener("DOMContentLoaded", function(event) { 
+                $('.links-slider').on('init', function(event, slick){
+                  $('.links-slider').removeClass('not-loading')
+                    console.log('res');
+                });
+                $('.links-slider').not('.slick-initialized').slick({
+                  infinite: true,
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    dots: true,
+                    responsive: [
+                      {
+                        breakpoint: 1024,
+                        settings: {
+                          slidesToShow: 3,
+                          slidesToScroll: 3,
+                          infinite: true,
+                          dots: true
+                        }
+                      },
+                      {
+                        breakpoint: 600,
+                        settings: {
+                          slidesToShow: 2,
+                          slidesToScroll: 2
+                        }
+                      },
+                      {
+                        breakpoint: 480,
+                        settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1
+                        }
+                      }
+                      // You can unslick at a given breakpoint now by adding:
+                      // settings: "unslick"
+                      // instead of a settings object
+                    ]
+                })
+              });
+            </script>
+          </div>
+        </section>
         <footer class="footer">
           <div class="container">
             <div class="menu-block">
