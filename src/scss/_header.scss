@@ -1,9 +1,22 @@
 .header{
   //height: $header-height;
+  @include breakpoint(max-width $desktop-width){
+    background-color: $color-primary;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  }
   .top-block{
     padding-top: 20px;
     margin-bottom: 12px;
-    border-top: solid 6px #2763c3;
+    border-top: solid 6px $color-primary;
+    @include breakpoint(max-width $desktop-width){
+      display: none;
+    }
     .top-block-wrapper{
       display: flex;
     }
@@ -23,7 +36,7 @@
           content: "";
           width: 30px;
           height: 30px;
-          background-color: #ffffff;
+          background-color: $color-white;
           position: absolute;
           left: -16px;
           top: -20px;

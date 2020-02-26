@@ -1,0 +1,59 @@
+<%
+  var data = {
+    title: "События и мероприятия",
+    show_sidebar: true,
+    sidebar_html : _.template(require('./../includes/sidebar.html').default)(),
+    show_map: true,
+  };
+%>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+    <%= _.template(require('./../includes/breadcrumbs.html').default)() %>
+  <section class="news-detail">
+      <h2 class="section-name">События и мероприятия детальный длинный заголовок очень длинный</h2>
+      <div class="news-info">
+        <div class="table">
+            <span class="item-date table-row">
+                <span class="item-icon table-cell">
+                    <svg class="svg-icon icon-grey ic-middle">
+                        <use xlink:href="<%=htmlWebpackPlugin.options.svgPath%>#sprite-date_range-24px"></use>
+                    </svg>
+                </span>
+                <span class="table-cell value">22.03.2020</span>
+                <span class="table-cell sep-cell"></span>
+                <span class="item-icon table-cell">
+                    <svg class="svg-icon icon-grey ic-middle">
+                        <use xlink:href="<%=htmlWebpackPlugin.options.svgPath%>#sprite-remove_red_eye-24px"></use>
+                    </svg>
+                </span>
+                <span class="table-cell value">3</span>             
+            </span>
+          </div>
+      </div>
+      <div class="detail-content">
+          <div class="detail-text">
+            <p>В целях реализации мероприятий государственной программы Краснодарского края «Социальная поддержка граждан» 26 июля 2017 года ГБУ СО КК «Динской КЦСОН» была организована теплоходная экскурсия «Взгляд с реки Кубань на город Краснодар и республику Адыгея». В экскурсии приняло участие 26 пожилых граждан, из которых 8 являются получателями социальных услуг и находятся на надомном социальном обслуживании и 18 членов клубов по интересам, действующих в учреждении.</p>
+
+            <p>В ходе поездки участники экскурсии посетили «Выставочный зал боевой славы», расположенный рядом с музеем военной техники «Оружие Победы». В зале представлены экспонаты ВОВ и Кубанского казачества: военная форма, награды, оружие, письма, предметы быта военных. Прогулка с экскурсоводом по Парку Победы заполнилась интересными историями об историческом облике города Краснодара. И завершением экскурсии стала часовая теплоходная прогулкой по маршруту Парк Победы – Рождественский парк - Парк Победы. Прогулка по воде оставила море приятных впечатлений у участников экскурсии, и прозвучало много благодарственных слов в адрес организаторов поездки, руководителей клубов по интересам и администрации Динского комплексного центра социального обслуживания населения.</p>
+            
+            <p>В мероприятии приняло участие 26 человек.</p>
+          </div>
+          <div class="soc-share">
+              <span class="soc-share-text">Поделись:</span>
+              <script type="application/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                <script type="application/javascript" src="https://yastatic.net/share2/share.js"></script>
+                <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,twitter,telegram"></div>
+          </div>
+          <div class="detail-photos">
+              <div class="photo-name">Фотоотчет:</div>
+              <div class="photo-list">
+                  <%for(var i = 0; i < 16 ; i++){%>
+                    <a href="/img/news-1.jpg" class="photo-item" data-fancybox="gallery" data-caption="Caption #1">
+                        <span class="photo-thumb" role="img" aria-label="" style="background-image:url('/img/news-1.jpg')"></span>
+                    </a>
+                <%}%>
+              </div>
+          </div>
+      </div>
+  </section>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

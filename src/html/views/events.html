@@ -1,0 +1,87 @@
+<%
+  var data = {
+    title: "События и мероприятия",
+    show_sidebar: true,
+    sidebar_html : _.template(require('./../includes/sidebar.html').default)(),
+    show_map: true,
+  };
+  var news = [
+    {
+        name: "Концерт великое слово – женщина",
+        img: "/img/news-1.jpg",
+        date: "22.02.2020",
+        views: "34"
+    },
+    {
+        name: "Концерт для получателей социальных услуг и участников клубов",
+        img: "/img/news-2.jpg",
+        date: "22.02.2020",
+        views: "34"
+    },
+    {
+        name: "Теплоходная экскурсия",
+        img: "/img/news-3.jpg",
+        date: "22.02.2020",
+        views: "34"
+    },
+    {
+        name: "Концерт великое слово – женщина",
+        img: "/img/news-1.jpg",
+        date: "22.02.2020",
+        views: "34"
+    },
+    {
+        name: "Концерт для получателей социальных услуг и участников клубов",
+        img: "/img/news-2.jpg",
+        date: "22.02.2020",
+        views: "34"
+    },
+    {
+        name: "Теплоходная экскурсия",
+        img: "/img/news-3.jpg",
+        date: "22.02.2020",
+        views: "34"
+    },
+  ];
+%>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+    <%= _.template(require('./../includes/breadcrumbs.html').default)() %>
+  <div class="section">
+      <h2 class="section-name">События и мероприятия</h2>
+      <div class="news-cmp">
+        <div class="news-list">
+            <% for(var i = 0; i < news.length; i++){%>
+              <a class="news-item" href="/event-detail.html" title="">
+                  <div class="item-content">
+                    <div class="item-img">
+                        <span role="img" class="news-img" aria-label="#" style="background-image: url(<%=news[i].img%>);"></span>
+                    </div>
+                    <div class="item-name">
+                      <%=news[i].name%>
+                    </div>
+                  </div>
+                  <div class="item-info table">
+                    <span class="item-date table-row">
+                        <span class="item-icon table-cell">
+                            <svg class="svg-icon icon-white ic-middle">
+                                <use xlink:href="<%=htmlWebpackPlugin.options.svgPath%>#sprite-date_range-24px"></use>
+                            </svg>
+                        </span>
+                        <span class="item-value table-cell"><%=news[i].date%></span>       
+                    </span>
+                    <span class="item-views table-row">
+                        <span class="item-icon table-cell">
+                            <svg class="svg-icon icon-white ic-middle">
+                                <use xlink:href="<%=htmlWebpackPlugin.options.svgPath%>#sprite-remove_red_eye-24px"></use>
+                            </svg>
+                        </span>
+                        <span class="item-value table-cell"><%=news[i].views%></span>      
+                    </span>
+                  </div>
+                </a>
+            <%}%>
+        </div>
+      </div>
+  </div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

@@ -1,0 +1,43 @@
+<%
+  var data = {
+    title: "Информационные материалы",
+    show_sidebar: true,
+    sidebar_html : _.template(require('./../includes/sidebar.html').default)(),
+    show_map: true,
+  };
+  var sections = [
+    {
+        name: "Приказы и законы",
+        img: "/img/section-orders-v1.png"
+    },
+    {
+        name: "Памятки и буклеты",
+        img: "/img/section-buklet-v1.png"
+    }, 
+    {
+        name: "Награды и грамоты",
+        img: "/img/section-cert-v1.png"
+    }, 
+    {
+        name: "Для информирования",
+        img: "/img/section-info-v1.png"
+    }, 
+  ];
+%>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+    <%= _.template(require('./../includes/breadcrumbs.html').default)() %>
+    <section class="info-materials">
+        <h2 class="section-name">Информационные материалы</h2>
+        <div class="section-list">
+            <%for(var i = 0; sections.length > i; i++){%>
+                <a href="/doc-table.html" class="section-item" title="">
+                    <div class="section-pic">
+                        <img src="<%=sections[i].img%>" alt="<%=sections[i].name%>">
+                    </div>
+                    <div class="section-name"><%=sections[i].name%></div>
+                </a>
+            <%}%>
+        </div>
+    </section>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

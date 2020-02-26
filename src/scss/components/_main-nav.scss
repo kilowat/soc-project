@@ -1,5 +1,8 @@
 .nav-block{
     background-color: $color-primary;
+    @include breakpoint(max-width $desktop-width){
+        display: none;
+      }
 }
 #main-nav{
     margin-bottom: 15px;
@@ -16,7 +19,7 @@
                 justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
-                color: #fff;
+                color: $color-white;
                 text-decoration: none;
                 padding-left: 10px;
                 padding-right: 10px;

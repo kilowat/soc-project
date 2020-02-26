@@ -1,0 +1,36 @@
+.info-materials{
+    .section-list{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -12px;
+        margin-right: -12px;
+        .section-item{
+            margin: 12px;
+            display: block;
+            width: calc(25% - 24px);
+            height: 200px;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            background-color: $color-primary-light;
+            border: 1px solid $color-border;
+            color: $color-dark;
+            &:hover{
+                color: $color-accent;
+                border-color: $color-accent;
+            }
+            @include breakpoint(max-width $pad-width){
+                width: calc(50% - 24px);
+            }
+            @include breakpoint(max-width $mobile-width){
+                width: calc(100% - 24px);
+            }
+            .section-pic{
+                img{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

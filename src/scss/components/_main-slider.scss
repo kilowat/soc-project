@@ -1,12 +1,21 @@
 .main-slider{
-    border: 1px solid #ccc;
+    border: 1px solid $color-border;
+    @include breakpoint(max-width 440px){
+        display: none;
+    }
     .glide__slide{
         height: 400px;
-        background-color: #ccc;
+        background-color: $color-border;
         position: relative;
         background-size: cover;
         position: relative;
         padding: 20px;
+        @include breakpoint(max-width $desktop-width){
+            height: 250px;
+        }
+        @include breakpoint(max-width $pad-width){
+            height: 200px;
+        }
     }
     .pic-wrapper{
         background-color: #1d4c99;
@@ -19,12 +28,14 @@
         top: 0;
     }
     .slider-content{
-        color: #fff;
+        color: $color-white;
         position: relative;
         z-index: 1;
         width: 100%;
         max-width: 420px;
         font-weight: 300;
+        max-height: calc(100% - 50px);
+        overflow: hidden;
         .slide-header{
             margin-bottom: 1em;
             font-size: 1.5em;
@@ -42,7 +53,7 @@
             display: block;
             padding:10px;
             background-color: $color-accent;
-            color: #fff;
+            color: $color-white;
             text-decoration: none;
             &:hover{
                 background-color: $color-accent-hover;

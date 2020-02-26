@@ -1,0 +1,13 @@
+.bx-breadcrumb{
+    display: flex;
+    font-size: 14px;
+    >div{
+        margin-right: 5px;
+    }
+    a{
+        color: $color-dark;
+        &:hover{
+            color: $color-accent;
+        }
+    }
+}

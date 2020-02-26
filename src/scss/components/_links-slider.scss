@@ -1,0 +1,26 @@
+.links-slider{
+    &.not-loading{
+        height: 108px;
+        >*{
+            opacity: 0;
+        }
+    }
+    .link-slide{
+        .link-pic{
+            text-align: center;
+            img{
+                display: inline-block;
+            }
+        }
+        .link-name{
+            text-align: center;
+            a{
+                color: $color-dark;
+                text-decoration: none;
+                &:hover{
+                    color: $color-accent;
+                }
+            }
+        }
+    }
+}
